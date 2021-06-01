@@ -30,8 +30,18 @@
 	</dependencies>
 
 	<build>
+	
 		<plugins>
+		    <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.1</version>
+            <configuration>
+                <fork>true</fork>
+                <executable> path to jdk \bin\javac.exe</executable>
+            </configuration>
+        </plugin>
 			<plugin>
+			
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
