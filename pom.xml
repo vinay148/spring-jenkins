@@ -15,6 +15,8 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>1.8</java.version>
+		        <java.home>C:\Program Files\Java\jdk1.8.0_281</java.home>
+		
 		 <maven.compiler.source>1.8</maven.compiler.source>
  			<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
@@ -34,8 +36,20 @@
 	<build>
 	
 		<plugins>
-		   
+		   <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <configuration>
+                      <verbose>true</verbose>
+                      <fork>true</fork>
+                      <executable>${java.home}</executable>
+                   <compilerVersion>1.8</compilerVersion>
+                   <source>1.8</source>
+                   <target>1.8</target>
+                 </configuration>
+             </plugin>
 			<plugin>
+			
 			
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
